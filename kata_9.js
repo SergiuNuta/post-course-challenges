@@ -1,10 +1,14 @@
 // How do you check if two strings are anagrams of each other?
 
-const checkIfStringsAreAnagrams = (string1, string2) => {
-    let result1 = string1.toLowerCase().split('').sort().join();
-    console.log(result1);
-    let result2 = string2.toLowerCase().split('').sort().join();
-    console.log(result2);
-        return (result1 === result2) 
+const checkAnagrams = (str1, str2) => {
+    const x = str1.toLowerCase().split("").sort().join("");
+    const y = str2.toLowerCase().split("").sort().join("");
+    if (typeof x == "string" && typeof y == "string") {
+        return (x === y) ? `${str1} and ${str2} are anagrams!` : `${str1} and ${str2} are not anagrams.`;
+    }
+    else {
+        return "Not a string!";
+    }
 }
-console.log(checkIfStringsAreAnagrams('Silent', 'Listen'));
+
+console.log(checkAnagrams('Silent', 'Listen'));
