@@ -5,7 +5,7 @@
 //Read up more on this one to familiarise myself
 
 const reverseString = (string) => {
-    return string ? reverseString(string.substr(1)) + string[0] : string;
+    return string ? reverseString(string.substr(1)) + string.charAt(0) : string;
 };
 
-console.log(reverseString('hello world!'));
+console.log(reverseString('Hello world!'));

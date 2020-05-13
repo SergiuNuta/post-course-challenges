@@ -1,8 +1,8 @@
 // How do you check if a given string is a palindrome?
 
-const palindromeCheck = (string) => {
+const checkPalindrome = (string) => {
     const reverseString = string.toLowerCase().split('').reverse().join('');
-    console.log(reverseString);
-    return string.toLowerCase() === reverseString;
+    return (string.toLowerCase() === reverseString) ? `The string "${string}" is a palindrome.` : `The string "${string}" is not a palindrome.`;
 }
-console.log(palindromeCheck('Minim'));
+
+console.log(checkPalindrome('Madam'));
