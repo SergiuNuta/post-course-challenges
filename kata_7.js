@@ -2,5 +2,6 @@
 
 const sentence = 'The man fell off a cliff';
 
-let reverseSentence = sentence.split(' ').reverse().join(' ');
-console.log(reverseSentence);
+const reverseWords = () => sentence.split(' ').reverse().join(' ');
+
+console.log(reverseWords());

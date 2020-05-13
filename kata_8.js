@@ -1,15 +1,13 @@
 // How do you print duplicate characters from a string?
 
-//INCOMPLETE....google returned Regex aka Regular expression and matching
-
 const string = "this is a random string";
 
-let result = string.split('').sort();
-console.log(result);
-let dupeCharacters = [];
-for (let i = 0; i < result.length; i++) {
-    if (result[i] === result[i + 1]) {
-        dupeCharacters.push(result[i]);
-    };
-};
-console.log(dupeCharacters);
+const printDuplicateChar = () => {
+    const sortedStr = string.split('').sort();
+    let duplicatesChar = [];
+    for (let i = 0; i < sortedStr.length; i ++)
+    if(sortedStr[i] === sortedStr[i + 1] && sortedStr[i] != sortedStr[i + 2]) duplicatesChar.push(sortedStr[i]);
+    return `From string "${string}" the duplicate characters is : ${duplicatesChar}`;
+}
+
+console.log(printDuplicateChar());
