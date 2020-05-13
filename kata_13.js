@@ -1,8 +1,5 @@
 // How do you check if two strings are a rotation of each other?
 
-const stringRotation = (string1, string2) => {
-    let controlString = string1.concat(string1);
-    return (controlString.includes(string2))
-};
+const areRotEq = (str1, str2) => str1.length === str2.length && str1.repeat(2).indexOf(str2) > -1 ? `The strings "${str1}" and "${str2}" are rotation of each other.` : `The strings "${str1}" and "${str2}" are not rotation of each other.`;
 
-console.log(stringRotation('hello', 'lohel'));
+console.log(areRotEq('hello', 'lohel'));
